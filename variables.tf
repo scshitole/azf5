@@ -2,10 +2,11 @@ variable "sp_subscription_id" {}
 variable "sp_client_id" {}
 variable "sp_client_secret" {}
 variable "sp_tenant_id" {}
+variable "principal_id" {}
 
 # Replace "YOUR_LAPTOP_PUBLIC_IP" with your actual public IP address
 variable "myip" {
-  default = "x.x.x.x/32"
+  default = "73.254.158.216/32"
 }
 variable "f5_username" {
   description = "The admin username of the F5 Bigip that will be deployed"
