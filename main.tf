@@ -1,11 +1,10 @@
-
-# Configure the Azure provider
+ # Configure the Azure provider
 provider "azurerm" {
   features {}
   client_id     = var.sp_client_id
   client_secret = var.sp_client_secret
   tenant_id     = var.sp_tenant_id
-  subscription_id = var.sp_subscription_id
+ subscription_id = var.sp_subscription_id
 }
 
 # Create a resource group
@@ -18,7 +17,7 @@ resource "azurerm_resource_group" "f5_rg" {
 resource "azurerm_role_assignment" "sp_vm_role" {
   scope                = azurerm_resource_group.f5_rg.id
   role_definition_name = "Virtual Machine Contributor"
-  principal_id         = var.sp_subscription_id
+  principal_id         = var.principal_id
 }
 
 # Create a virtual network
@@ -98,4 +97,5 @@ resource "azurerm_virtual_machine" "f5_vm" {
     product   = var.f5_product_name
     publisher = var.image_publisher
   }
+
 
