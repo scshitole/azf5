@@ -1,4 +1,4 @@
- Create NSG for BIG-IP subnet
+# Create NSG for BIG-IP subnet
 resource "azurerm_network_security_group" "f5_nsg" {
   name                = "f5-subnet-nsg"
   location            = azurerm_resource_group.f5_rg.location

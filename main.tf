@@ -1,4 +1,4 @@
- # Configure the Azure provider
+# Configure the Azure provider
 provider "azurerm" {
   features {}
   client_id     = var.sp_client_id
@@ -99,3 +99,4 @@ resource "azurerm_virtual_machine" "f5_vm" {
   }
 
 
+}
